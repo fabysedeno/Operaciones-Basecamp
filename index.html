@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>KORU · Plataforma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="home" class="wrap">
+<header>
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M24 24c0-3 3-4 5-2s1 6-3 7c-5 1-9-3-8-8 1-6 8-9 14-6 7 4 7 14 2 19"/><circle cx="24" cy="24" r="1" fill="currentColor"/></svg>
+<div><h1>KORU</h1><div class="sub">Organismo Social de Aprendizaje</div></div>
+</header>
+<div class="ask" role="heading" aria-level="2">¿A qué área quieres entrar?</div>
+<div id="tiles"></div>
+<div class="meta" data-sync style="margin-top:18px"></div><div class="meta" style="margin-top:6px">Al volver a esta pantalla se cierra el acceso con PIN.</div>
+</div>
+<div id="app" hidden>
+<div class="bar"><button id="back">‹ Áreas</button><b id="ttl"></b><span data-sync class="meta" style="margin-left:auto;text-align:right"></span><button id="sugbtn">Sugerir mejora</button></div>
+<nav id="tabs" role="tablist" aria-label="Secciones del área"></nav>
+<div id="subs" role="group" aria-label="Apartados" hidden></div>
+<dialog id="sg" aria-labelledby="sgt"><h2 id="sgt" style="margin-top:0">Sugerir una mejora</h2><div class="meta" id="sgc"></div><label for="sgx" class="meta" style="display:block;margin-top:10px">¿Qué falta, qué confunde o qué sobra?</label><textarea id="sgx" rows="5"></textarea><div id="sge" role="alert" style="color:var(--terra);font-weight:600;min-height:22px"></div><div style="display:flex;gap:8px;margin-top:6px"><button type="button" id="sgn" class="gh">Cancelar</button><button type="button" id="sgs" class="fl">Enviar sugerencia</button></div></dialog>
+<div id="frames"><div id="load" class="meta" style="padding:20px">Cargando…</div></div>
+</div>
+<script src="config.js"></script>
+<script src="js/claude-compat.js"></script>
+<script src="js/gate.js"></script>
+<script src="js/sync.js"></script>
+<script src="js/shell.js"></script>
+</body>
+</html>
